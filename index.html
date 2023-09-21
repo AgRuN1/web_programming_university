@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Уроки ассемблера</title>
+</head>
+<body>
+    <main class="main">
+        <h1 class="block">Как выглядит код на ассемблере в реальности</h1>
+        <div class="slider-container">
+            <div class="slider">
+              <img src="images/image1.png" alt="картинка с кодом">
+              <img src="images/image2.png" alt="картинка с кодом">
+              <img src="images/image3.png" alt="картинка с кодом">
+            </div>
+            <button class="prev-button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
+            <button class="next-button" aria-label="Посмотреть следующий слайд">&gt</button>
+          </div>
+          <h2 class="block">Регистры</h2>
+          <table cellpadding="5px" class="table">
+            <tbody><tr bgcolor="silver">
+              <td><b>Название</b></td>
+              <td><b>Разрядность</b></td>
+              <td><b>Основное назначение</b></td>
+            </tr>
+            <tr>
+              <td><center>RAX</center></td>
+              <td><center>64</center></td>
+              <td>Аккумулятор</td>
+            </tr>
+            <tr>
+              <td><center>RBX</center></td>
+              <td><center>64</center></td>
+              <td>База</td>
+            </tr>
+            <tr>
+              <td><center>RCX</center></td>
+              <td><center>64</center></td>
+              <td>Счётчик</td>
+            </tr>
+            <tr>
+              <td><center>RDX</center></td>
+              <td><center>64</center></td>
+              <td>Регистр данных</td>
+            </tr>
+            <tr>
+              <td><center>RSI</center></td>
+              <td><center>64</center></td>
+              <td>Индекс источника</td>
+            </tr>
+            <tr>
+              <td><center>RDI</center></td>
+              <td><center>64</center></td>
+              <td>Индекс приёмника</td>
+            </tr>
+            <td><center>R8</center></td>
+            <td><center>64</center></td>
+            <td>Вспомогательный</td>
+          </tr>
+          <tr>
+            <td><center>R9</center></td>
+            <td><center>64</center></td>
+            <td>Вспомогательный</td>
+          </tr>
+          <tr>
+            <td><center>R10</center></td>
+            <td><center>64</center></td>
+            <td>Вспомогательный</td>
+          </tr>
+          <tr>
+            <td><center>R11</center></td>
+            <td><center>64</center></td>
+            <td>Вспомогательный</td>
+          </tr>
+          <tr>
+            <td><center>R12</center></td>
+            <td><center>64</center></td>
+            <td>Вспомогательный</td>
+          </tr>
+          <tr>
+            <td><center>R13</center></td>
+            <td><center>64</center></td>
+            <td>Вспомогательный</td>
+          </tr>
+          <td><center>R14</center></td>
+          <td><center>64</center></td>
+          <td>Вспомогательный</td>
+        </tr>
+        <tr>
+          <td><center>R15</center></td>
+          <td><center>64</center></td>
+          <td>Вспомогательный</td>
+        </tr>
+        <tr>
+            <td><center>RBP</center></td>
+            <td><center>64</center></td>
+            <td>Указатель базы</td>
+        </tr>
+        <tr>
+            <td><center>RSP</center></td>
+            <td><center>64</center></td>
+            <td>Указатель стека</td>
+        </tr>
+        <tr>
+            <td><center>RFLAGS</center></td>
+            <td><center>64</center></td>
+            <td>Регистр флагов</td>
+        </tr>
+        <tr>
+            <td><center>RIP</center></td>
+            <td><center>64</center></td>
+            <td>Указатель инструкции</td>
+        </tr>
+        </tbody>
+    </table>
+    <h2 class="block">Базовые команды</h2>
+    <div class="block">
+        <div>mov перемещает данные</div>
+        <div>add складывает два значения и помещает в первый регистр</div>
+        <div>sub вычитает второе значение из первого и сохраняет результат в первый регистр</div>
+        <dialog id="dialog-1">
+                <p>mov rax,rbx</p>
+                <p>mov rax,[addr] //значение по адресу</p>
+                <p>mov [addr],rax</p>
+                <p>mov rax,5</p>
+                <p>нельзя перемещать данные из адреса в адрес</p>
+                <p>sub rsp,28</p>
+                <p>add rsp,28</p>
+                <button class="close" data-dialog="1">Закрыть</button>
+        </dialog>
+        <button class="show" data-dialog="1">Примеры</button>
+    </div>
+    </main>
+    <script src="script.js"></script>
+<script type = text/javascript>
+</script>
+</body>
+</html>
